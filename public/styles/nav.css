@@ -1,0 +1,36 @@
+.navbar-fixed-top {
+  height: 120px;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1030;
+}
+
+.navbar-brand {
+  position: absolute;
+  font-family: 'Bungee', cursive;
+  font-size: 40px;
+  margin: 1.5em;
+}
+
+.navbar {
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+.navbar-sub {
+  position: absolute;
+  margin: 1.5em;
+  right: 50px;
+  bottom: 10px;
+}
+
+.navbar-arrow {
+  font-size: 50px;
+  color: orangered;
+  position: absolute;
+  right: 170px;
+  margin-bottom: 1.5em;
+  bottom: -65px;
+}
