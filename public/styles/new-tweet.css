@@ -1,0 +1,56 @@
+.new-tweet {
+  position: relative;
+  top: -20px;
+  height: 100%;
+}
+
+.new-tweet-form {
+  position: relative;
+  background-color: #F5F1ED;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 150px;
+  margin: 0 auto;
+  color: #202020;
+}
+
+.center-text {
+  text-align: center;
+}
+
+#form-question {
+  position: relative;
+  margin: 20px;
+  font-weight: bold;
+}
+
+#tweet-text {
+  width: 97%;
+  border: none;
+  border-bottom: 4px solid #202020;
+  background-color: #F5F1ED;
+  color: #202020;
+  resize: none;
+  height: 50px;
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  font-size: 20px;
+}
+
+#submit-btn {
+  position: absolute;
+  background-color: #4056A1;
+  font-family: 'Bungee', cursive;
+  color: #FFFFFF;
+  padding: 3px 10px 3px 10px;
+  bottom: 25px;
+  left: 18px;
+  margin-top: 20px;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+  position: absolute;
+  bottom: 40px;
+  right: 15px;
+}
