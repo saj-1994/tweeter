@@ -10,7 +10,6 @@
   font-family: 'Source Sans Pro', sans-serif;
   height: 150px;
   margin: 0 auto;
-  color: #202020;
 }
 
 .center-text {
@@ -26,7 +25,7 @@
 #tweet-text {
   width: 97%;
   border: none;
-  border-bottom: 4px solid #202020;
+  border-bottom: 4px solid #545149;
   background-color: #F5F1ED;
   color: #202020;
   resize: none;

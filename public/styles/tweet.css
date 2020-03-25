@@ -1,0 +1,71 @@
+#tweet {
+  position: relative;
+  border: 4px solid #545149;
+  width: 97%;
+  height: 250px;
+  left: 20px;
+}
+
+#tweet:hover {
+  box-shadow: 10px 10px 0 #a1bebf;
+}
+
+#tweet:hover header span {
+  visibility: visible;
+}
+
+#tweet header img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 20px;
+}
+
+#tweet header p {
+  position: absolute;
+  top: 10px;
+  left: 80px;
+}
+
+#tweet header span {
+  position: absolute;
+  color: #a1bebf;
+  visibility: hidden;
+  top: 20px;
+  right: 20px;
+}
+
+#tweet section p {
+  position: relative;
+  width: 90%;
+  margin-left: 20px;
+}
+
+#tweet section {
+  position: relative;
+  width: 97%;
+  height: 100px;
+  top: 65px;
+  left: 10px;
+  border-bottom: 4px solid #545149;
+}
+
+#tweet footer {
+  position: relative;
+  width: 97%;
+  top: 70px;
+  left: 10px;
+}
+
+#symbol {
+  position: absolute;
+  color: #4056A1;
+  right: 20px;
+}
+
+#day-counter {
+  position: absolute;
+  font-size: 15px;
+  left: 20px;
+}
