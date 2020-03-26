@@ -33,14 +33,17 @@
 
     <!--Counter JS-->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <!--Client JS-->
+    <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="navbar navbar-fixed-top">
       <span class="navbar-brand">Tweeter</span>
-      <span class="navbar-sub"><strong>Write</strong> a new tweet</span>
-      <span class="navbar-arrow">&#8609</span>
+      <span class="navbar-sub" id="new-tweet-toggle"><strong>Write</strong> a new tweet</span>
+      <span class="navbar-arrow" id="navbar-arrow">&#8609</span>
     </nav>
     <!--Header with profile-->
     <header class="header header-fixed-top">
@@ -53,37 +56,22 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section class="new-tweet" id="new-tweet">
         <h2 class="center-text">Compose Tweet</h2>
-        <form method="POST" action="/tweets/" class="new-tweet-form">
+        <div class="new-tweet-error" id="error">
+          <span>&#9888</span>
+          <span id="error-msg"></span>
+          <span>&#9888</span>
+        </div>
+        <form method="POST" action="/tweets/" class="new-tweet-form" id="new-tweet-form">
           <label for="tweet-text" id="form-question">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <button type="submit" id="submit-btn">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+          <textarea name="text" class="new-tweet-text" id="tweet-text"></textarea>
+          <button type="submit" id="new-tweet-submit-btn">Tweet</button>
+          <output name="counter" class="new-tweet-counter" id="counter" for="tweet-text">140</output>
         </form>
       </section>
-      <section>
-        <article id="tweet">
-          <header>
-            <img src="https://publicdomainvectors.org/photos/Avatar_3.png" alt="user avatar">
-            <p>Name</p>
-            <span>@Username</span>
-          </header>
-          <section>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-            </p>  
-          </section>
-          <footer>
-            <span id="day-counter">10 days ago</span>
-            <span id="symbol">
-              <span>&#9873</span>
-              <span>&#8633</span>
-              <span>&#10084</span>
-            </span>
-          </footer>
-        </article>
+      <section id="tweets-container">
+
       </section>
     </main>
   </body>

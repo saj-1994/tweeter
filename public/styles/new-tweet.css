@@ -22,7 +22,7 @@
   font-weight: bold;
 }
 
-#tweet-text {
+.new-tweet-text {
   width: 97%;
   border: none;
   border-bottom: 4px solid #545149;
@@ -36,7 +36,7 @@
   font-size: 20px;
 }
 
-#submit-btn {
+#new-tweet-submit-btn {
   position: absolute;
   background-color: #4056A1;
   font-family: 'Bungee', cursive;
@@ -47,13 +47,24 @@
   margin-top: 20px;
 }
 
-.counter {
+.new-tweet-counter {
   font-family: 'Bungee', cursive;
   position: absolute;
   bottom: 40px;
   right: 15px;
 }
 
-.red {
+.new-tweet-negative-counter {
   color: #FF0000;
+}
+
+.new-tweet-error {
+  display: none;
+  position: relative;
+  font-size: 20px;
+  color: #FF0000;
+  left: 20px;
+  width: 97%;
+  padding: 2px 0 2px 4px;
+  border: 2px solid #FF0000;
 }

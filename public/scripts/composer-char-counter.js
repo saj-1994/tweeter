@@ -1,14 +1,14 @@
 $(document).ready(() => {
   $('#tweet-text').on('keyup', function(evt) {
-    let output = 140 - this.value.length;
-    let counter = $(this).parents('.new-tweet-form').children('.counter');
+    const output = 140 - $(this).val().length;
+    const $counter = $(this).parents('#new-tweet-form').children('#counter');
     
     if(output < 0) {
-      counter.text(output);
-      counter.addClass("red");
+      $counter.text(output);
+      $counter.addClass("new-tweet-negative-counter");
     } else {
-      counter.removeClass("red");
-      counter.text(output);
+      $counter.removeClass("new-tweet-negative-counter");
+      $counter.text(output);
     }
   });
 });

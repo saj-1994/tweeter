@@ -26,6 +26,11 @@
   bottom: 10px;
 }
 
+.navbar-sub:hover,
+.navbar-arrow:hover {
+  cursor: pointer;
+}
+
 .navbar-arrow {
   font-size: 50px;
   color: orangered;
