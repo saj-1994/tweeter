@@ -60,6 +60,7 @@
     transform: translateY(-10px);
   }
 }
+
 @media (min-width: 768px) {
   .navbar {
     text-align: unset;
@@ -76,11 +77,10 @@
     margin: unset;
   }
 }
+
 @media (min-width: 1024px) {
   .navbar {
     background-color: #4056a1;
     background-image: none;
   }
 }
-
-/*# sourceMappingURL=nav.css.map */
