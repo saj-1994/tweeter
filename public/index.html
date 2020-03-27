@@ -36,19 +36,23 @@
 
     <!--Client JS-->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="navbar navbar-fixed-top">
       <span class="navbar-brand">Tweeter</span>
-      <span class="navbar-sub" id="new-tweet-toggle"><strong>Write</strong> a new tweet</span>
-      <span class="navbar-arrow" id="navbar-arrow">&#8609</span>
+      <div class="navbar-sub">
+        <span class="navbar-sub-text" id="new-tweet-toggle"><strong>Write</strong> a new tweet</span>
+        <img src="/images/double-arrow.png" alt="double-arrow" id="navbar-arrow" class="navbar-sub-arrow">
+      </div>
     </nav>
     <!--Header with profile-->
     <header class="header header-fixed-top">
       <div class="header-avatar">
-        <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png" alt="user-avatar"> 
       </div>
       <div class="header-name">
         <h2>Your Name</h2>
@@ -57,7 +61,6 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet" id="new-tweet">
-        <h2 class="center-text">Compose Tweet</h2>
         <div class="new-tweet-error" id="error">
           <span>&#9888</span>
           <span id="error-msg"></span>

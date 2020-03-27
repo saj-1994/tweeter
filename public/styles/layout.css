@@ -24,8 +24,17 @@ body {
 
 .container {
   width: 90%;
-  margin: 0 auto;
+  margin: auto;
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ @media (min-width: 1024px) {
+  .container {
+    position: absolute;
+    width: 50%;
+    margin: unset;
+    right: 3%;
+    top: 150px
+  }
+}
