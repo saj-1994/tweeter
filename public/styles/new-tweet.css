@@ -2,6 +2,7 @@
   position: relative;
   top: 10px;
   height: 100%;
+  display: none;
 }
 
 .new-tweet-form {
