@@ -25,16 +25,18 @@
 
 .tweet header p {
   position: absolute;
-  top: -10px;
-  left: 80px;
+  font-size: 20px;
+  top: -5px;
+  left: 70px;
 }
 
 .tweet header span {
   position: absolute;
   color: #a1bebf;
   visibility: hidden;
-  top: 20px;
+  top: 15px;
   right: 20px;
+  font-size: 20px;
 }
 
 .tweet section p {
@@ -42,6 +44,7 @@
   width: 90%;
   margin-left: 20px;
   word-wrap: break-word;
+  font-size: 17px;
 }
 
 .tweet section {
@@ -75,7 +78,7 @@
 @media (min-width: 768px) {
   .tweet {
     height: 250px;
-    top: 30px;
+    top: 19px;
   }
 
   .tweet header img {
@@ -84,14 +87,25 @@
     top: 20px;
   }
 
+  .tweet header span {
+    font-size: inherit;
+    top: 30px;
+  }
+
   .tweet header p {
     top: 10px;
+    font-size: inherit;
+    left: 80px;
   }
 
   .tweet section {
     width: 97%;
     top: 65px;
     left: 10px;
+  }
+
+  .tweet section p {
+    font-size: inherit;
   }
 
   .tweet footer {

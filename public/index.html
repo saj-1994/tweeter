@@ -61,20 +61,21 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet" id="new-tweet">
-        <div class="new-tweet-error" id="error">
+        <div id="new-tweet-error">
           <span>&#9888</span>
-          <span id="error-msg"></span>
+          <span id="new-tweet-error-msg"></span>
           <span>&#9888</span>
         </div>
-        <form method="POST" action="/tweets/" class="new-tweet-form" id="new-tweet-form">
-          <label for="tweet-text" id="form-question">What are you humming about?</label>
-          <textarea name="text" class="new-tweet-text" id="tweet-text"></textarea>
+        <!--New-tweet form-->
+        <form method="POST" action="/tweets/" id="new-tweet-form">
+          <label for="new-tweet-text">What are you humming about?</label>
+          <textarea name="text" id="new-tweet-text"></textarea>
           <button type="submit" id="new-tweet-submit-btn">Tweet</button>
-          <output name="counter" class="new-tweet-counter" id="counter" for="tweet-text">140</output>
+          <output name="counter" class="new-tweet-counter" id="counter" for="new-tweet-text">140</output>
         </form>
       </section>
       <section id="tweets-container">
-
+        <!--Tweets injected here-->
       </section>
     </main>
   </body>

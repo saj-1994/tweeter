@@ -109,10 +109,10 @@ $(document).ready(() => {
     const form = $(this);
     // traverses to the children nodes of the current node
     const counter = form.children("#counter").val();
-    const tweet = form.children("#tweet-text").val();
+    const tweet = form.children("#new-tweet-text").val();
     const tweetErr = getTweetErrMsg(tweet, counter);
 
-    $("#error").slideUp();
+    $("#new-tweet-error").slideUp();
     // checks user input for errors and posts if no errors else shows error msg
     if (!tweetErr) {
       postTweets(form, () => {
@@ -121,8 +121,8 @@ $(document).ready(() => {
       $(form)[0].reset();
       $(form.children("#counter")).text(140);
     } else {
-      $("#error-msg").text(tweetErr);
-      $("#error").slideDown();
+      $("#new-tweet-error-msg").text(tweetErr);
+      $("#new-tweet-error").slideDown();
     }
   });
 
@@ -133,7 +133,7 @@ $(document).ready(() => {
       $newTweet.slideUp();
     } else {
       $newTweet.slideDown(() => {
-        $("#tweet-text").focus();
+        $("#new-tweet-text").focus();
       });
     }
   });

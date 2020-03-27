@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $("#tweet-text").on("keyup", function() {
+  $("#new-tweet-text").on("keyup", function() {
     const output = 140 - $(this).val().length;
     const $counter = $(this)
       .parents("#new-tweet-form")
