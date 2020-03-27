@@ -7,15 +7,17 @@ const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-} 
+};
 
+// injects tweet html markup into the html file
 const renderTweets = tweets => {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').prepend($tweet);
   }
-}
+};
 
+// creates the html markup using the tweet data
 const createTweetElement = tweet => {
   const {name, avatars, handle} = tweet.user;
   const {text} = tweet.content;
@@ -43,15 +45,17 @@ const createTweetElement = tweet => {
           </footer>
         </article>
         `;
-        return $tweetMarkup;
-}
+  return $tweetMarkup;
+};
 
+// calculates number of days between given time in ms and current date and time
 const getNumberOfDays = timeInMs => {
   const today = new Date();
   const diffInTime = today.getTime() - timeInMs;
   return Math.floor(diffInTime / (1000 * 3600 * 24));
-}
+};
 
+// sends a POST request to the server with the tweet data
 const postTweets = (form, callback) => {
   const $form = form;
   const data = $form.serialize();
@@ -60,56 +64,59 @@ const postTweets = (form, callback) => {
     type: "POST",
     data: data
   })
-  .then(() => {
-    callback();
-  })
-}
+    .then(() => {
+      callback();
+    });
+};
 
 const getTweetErrMsg = (tweet, counter) => {
-  if(tweet === '' || tweet === null) {
+  if (tweet === '' || tweet === null) {
     return 'The tweet field is empty, please enter a valid tweet.';
-  } else if(counter < 0) {
+  } else if (counter < 0) {
     return 'The tweet is too long, please enter tweet below 140 characters.';
   }
-}
+};
 
-const loadTweets = () => {
+// sends a GET request to get all the tweets stored in the DB
+const loadTweets = (callback) => {
   $.ajax({
     url: '/tweets/',
     type: 'GET',
     dataType: 'JSON'
   })
-  .then (res => {
-    renderTweets(res);
-  });
-}
+    .then(res => {
+      callback(res);
+    });
+};
 
+// gets the last tweet posted in the DB
 const loadLastTweet = () => {
-  $.ajax({
-    url: '/tweets/',
-    type: 'GET',
-    dataType: 'JSON'
-  })
-  .then (res => {
-    const lastTweetInd = res.length - 1;
+  loadTweets((tweets) => {
+    const lastTweetInd = tweets.length - 1;
     const lastTweet = [];
-    lastTweet.push(res[lastTweetInd]);
+    lastTweet.push(tweets[lastTweetInd]);
     renderTweets(lastTweet);
-  })
-}
+  });
+};
 
-$(document).ready(() => { 
-  loadTweets();
+// executes only when the DOM is fully loaded
+$(document).ready(() => {
+  loadTweets((tweets) => {
+    renderTweets(tweets);
+  });
 
+  // executes when the form tries to submit
   $('#new-tweet-form').on('submit', function(evt) {
-    event.preventDefault();
+    evt.preventDefault();
     const form = $(this);
+    // traverses to the children nodes of the current node
     const counter = form.children('#counter').val();
     const tweet = form.children('#tweet-text').val();
     const tweetErr = getTweetErrMsg(tweet, counter);
     
     $('#error').slideUp();
-    if(!tweetErr) {
+    // checks user input for errors and posts if no errors else shows error msg
+    if (!tweetErr) {
       postTweets(form, () => {
         loadLastTweet();
       });
@@ -119,10 +126,10 @@ $(document).ready(() => {
       $('#error-msg').text(tweetErr);
       $('#error').slideDown();
     }
-    
   });
 
-  $('#new-tweet-toggle, #navbar-arrow').on('click', function(evt) {
+  // toggles the new tweet form when new tweet button clicked
+  $('#new-tweet-toggle, #navbar-arrow').on('click', function() {
     const $newTweet = $('#new-tweet');
     if ($newTweet.is(':visible')) {
       $newTweet.slideUp();
@@ -131,8 +138,6 @@ $(document).ready(() => {
         $('#tweet-text').focus();
       });
     }
-    
-  })
-
+  });
 });
 
