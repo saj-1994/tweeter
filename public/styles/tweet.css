@@ -62,7 +62,7 @@
 
 #symbol {
   position: absolute;
-  color: #4056A1;
+  color: #4056a1;
   right: 20px;
 }
 
@@ -83,17 +83,17 @@
     height: 50px;
     top: 20px;
   }
-  
+
   .tweet header p {
     top: 10px;
   }
-  
+
   .tweet section {
     width: 97%;
     top: 65px;
     left: 10px;
   }
-  
+
   .tweet footer {
     top: 70px;
   }

@@ -11,13 +11,13 @@
 .navbar {
   background-color: #1791fc;
   background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
 }
 
 .navbar-brand {
   position: relative;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   font-size: 40px;
   margin: 1.5em;
 }
@@ -53,8 +53,12 @@
 }
 
 @keyframes updown {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 @media (min-width: 768px) {
@@ -63,7 +67,7 @@
   }
 
   .navbar-brand {
-    top: 30px; 
+    top: 30px;
   }
 
   .navbar-sub {
@@ -76,7 +80,7 @@
 
 @media (min-width: 1024px) {
   .navbar {
-    background-color: #4056A1;
+    background-color: #4056a1;
     background-image: none;
   }
 }

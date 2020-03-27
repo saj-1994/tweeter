@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -18,7 +20,7 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   padding-bottom: 50px;
 }
 
@@ -29,12 +31,12 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- @media (min-width: 1024px) {
+@media (min-width: 1024px) {
   .container {
     position: absolute;
     width: 50%;
     margin: unset;
     right: 3%;
-    top: 150px
+    top: 150px;
   }
 }
