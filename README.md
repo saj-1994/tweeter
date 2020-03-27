@@ -18,6 +18,12 @@ The Tech Stack used for this project are:
   - Node
   - Express
 
+## Final Product
+!["Tweeter Desktop View"](https://github.com/sajinthan1994/tweeter/blob/master/public/images/Tweeter-Desktop%20view.png?raw=true)
+
+!["Tweeter Tablet View"](https://github.com/sajinthan1994/tweeter/blob/master/public/images/Tweeter-Tablet%20view.png?raw=true)
+
+!["Tweeter Desktop View"](https://github.com/sajinthan1994/tweeter/blob/master/public/images/Tweeter-mobile%20view.png?raw=true)
 ## Getting Started
 
 1. Install all dependencies (using the `npm install` command).
